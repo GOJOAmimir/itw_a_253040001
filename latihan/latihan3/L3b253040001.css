@@ -1,0 +1,31 @@
+body {
+  background-color: aqua;
+  font-family: Georgia;
+}
+h1 {
+  font-family: Comic Sans MS;
+  font-size: 60px;
+  color: darkblue;
+  text-align: center;
+}
+h4 {
+  text-align: right;
+  font-style: italic;
+}
+
+.p1kuning {
+  color: rgb(223, 223, 98);
+  text-align: center;
+}
+
+.p2height {
+  line-height: 30px;
+  text-align: center;
+}
+
+.a1 {
+  color: white;
+}
+.a2 {
+  color: blue;
+}
