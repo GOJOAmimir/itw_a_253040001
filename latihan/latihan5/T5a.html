@@ -6,6 +6,7 @@
     <title>Linen Send</title>
     <link rel="stylesheet" href="T5a.css" />
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -261,5 +262,35 @@
         </table>
       </div>
     </main>
+
+    <!-- Overlay -->
+    <div class="overlay" id="printOverlay">
+      <div class="print-box">
+        <button class="close-btn" id="closeOverlay">✖</button>
+        <h2>Siap untuk dicetak</h2>
+        <p>Pastikan semua data telah benar sebelum melanjutkan proses print.</p>
+        <button class="btn back-btn" id="backOverlay">Kembali</button>
+      </div>
+    </div>
+
+    <script>
+      const printBtn = document.querySelector(".print-btn");
+      const overlay = document.getElementById("printOverlay");
+      const closeBtn = document.getElementById("closeOverlay");
+      const backBtn = document.getElementById("backOverlay");
+
+      printBtn.addEventListener("click", () => {
+        overlay.style.display = "flex";
+      });
+
+      const hideOverlay = () => (overlay.style.display = "none");
+
+      closeBtn.addEventListener("click", hideOverlay);
+      backBtn.addEventListener("click", hideOverlay);
+
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) hideOverlay();
+      });
+    </script>
   </body>
 </html>

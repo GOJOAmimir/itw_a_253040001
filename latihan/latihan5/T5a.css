@@ -5,6 +5,61 @@
   font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.print-box {
+  background: white;
+  width: 794px; /* lebar A4 dalam px */
+  height: 1123px; /* tinggi A4 dalam px */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.confirm-print {
+  margin-top: 20px;
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirm-print:hover {
+  background-color: deepskyblue;
+}
+
 /* Navbar */
 .navbar {
   height: 60px;
