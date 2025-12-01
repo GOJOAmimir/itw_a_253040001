@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.print-box {
+  background: white;
+  width: 794px; /* lebar A4 dalam px */
+  height: 1123px; /* tinggi A4 dalam px */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.confirm-print {
+  margin-top: 20px;
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirm-print:hover {
+  background-color: deepskyblue;
+}
+
+/* Navbar */
+.navbar {
+  height: 60px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #1abc9c;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #34495e;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #1abc9c;
+  color: white;
+  padding-left: 30p;
+}
+
+.main-content {
+  padding-top: 80px;
+  padding-left: 250px;
+}
+
+/* Card Container */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: 3px solid black;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Flex layout untuk isi card */
+.card-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Teks di sisi kiri */
+.card-text h2 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.card-text p {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #1abc9c;
+  margin: 40px 20px 20px 20px;
+}
+
+/* Gambar di sisi kanan */
+.card-image img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Efek hover */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Kartu daftar batch terbaru */
+.batch-list-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  flex-grow: 1;
+  min-width: 280px;
+}
+
+.batch-list-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+.batch-list-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.batch-list-card li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.batch-list-card li:last-child {
+  border-bottom: none;
+}
+
+/* Toolbar (Search & Buttons) */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolbar-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+/* Toolbar Buttons */
+.toolbar-right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s, color 0.3s;
+}
+
+/* Log Button */
+.log-btn {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+}
+
+.log-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Print Button – sesuai permintaan */
+.print-btn {
+  background-color: white;
+  color: #1abc9c;
+  border: 2px solid #1abc9c;
+}
+
+.print-btn:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* Sort Button (Dropdown) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+}
+
+.sort-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1;
+  top: 110%;
+  left: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f8ff;
+}
+
+/* Tampilkan dropdown saat hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hover efek umum */
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Table Section */
+.table-section {
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  padding-bottom: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul di atas tabel */
+.table-section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Table style */
+.linen-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.linen-table thead {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.linen-table th,
+.linen-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Hover row */
+.linen-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.detail-btn {
+  background-color: white;
+  color: lightskyblue;
+  border: 1px solid lightskyblue;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.detail-btn:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 19px;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+/* Tombol Hambargar */
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.navbar-left {
+  display: flex;
+}
+
+/* Responsive table */
+@media screen and (max-width: 768px) {
+  .linen-table th,
+  .linen-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .linen-table th,
+  .linen-table td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+  .navbar a {
+    display: none;
+  }
+}

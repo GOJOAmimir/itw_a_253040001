@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linen Send</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <span class="logo">Linen Tracker </span>
+      </div>
+      <div class="navbar-right">
+        <a href="#">Home</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Batch List</a></li>
+        <li><a href="#" class="active">Storage Out</a></li>
+        <li><a href="#">Usage</a></li>
+        <li><a href="#">Finished</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <h1>Welcome to Linen Out Viewer</h1>
+
+      <!-- Card container -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-text">
+              <h2>Linen Yang Dikirim</h2>
+              <p>1.089</p>
+            </div>
+            <div class="card-image">
+              <img src="img/Trolley.png" alt="Trolley" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-text">
+              <h2>Total Jenis Linen</h2>
+              <p>28</p>
+            </div>
+            <div class="card-image">
+              <img src="img/pileTowel.jpg" alt="Pile of Towels" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-text">
+              <h2>Linen Dikirim Hari ini</h2>
+              <p>5.992</p>
+            </div>
+            <div class="card-image">
+              <img src="img/paperBoard.png" alt="Pile of Towels" />
+            </div>
+          </div>
+        </div>
+
+        <div class="batch-list-card">
+          <h2 style="text-align: center">Batch Terbaru</h2>
+          <ul>
+            <li><strong>Batch 18</strong> – 260 linen – Melati</li>
+            <li><strong>Batch 19</strong> – 225 linen – Hendra</li>
+            <li><strong>Batch 20</strong> – 280 linen – Tika</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <input type="text" placeholder="Cari linen..." class="search-input" />
+        </div>
+        <div class="toolbar-right">
+          <div class="dropdown">
+            <button class="btn sort-btn">Sort ▼</button>
+            <div class="dropdown-content">
+              <a href="#">Sort by Name</a>
+              <a href="#">Sort by Date</a>
+              <a href="#">Sort by Jumlah</a>
+            </div>
+          </div>
+
+          <button class="btn log-btn">Log</button>
+          <button class="btn print-btn">Print🖨️</button>
+        </div>
+      </div>
+
+      <!-- Table Section -->
+      <div class="table-section">
+        <h2>Daftar Batch Linen</h2>
+        <table class="linen-table">
+          <thead>
+            <tr>
+              <th>Batch</th>
+              <th>Jumlah</th>
+              <th>Pembawa</th>
+              <th>Estimasi Selesai</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Batch 1</td>
+              <td>250</td>
+              <td>Budi</td>
+              <td>2025-11-10 13:00</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 2</td>
+              <td>180</td>
+              <td>Sinta</td>
+              <td>2025-11-10 13:45</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 3</td>
+              <td>210</td>
+              <td>Rian</td>
+              <td>2025-11-10 14:15</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 4</td>
+              <td>190</td>
+              <td>Wulan</td>
+              <td>2025-11-10 14:30</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 5</td>
+              <td>275</td>
+              <td>Andi</td>
+              <td>2025-11-10 14:45</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 6</td>
+              <td>160</td>
+              <td>Dewi</td>
+              <td>2025-11-10 15:00</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 7</td>
+              <td>230</td>
+              <td>Tono</td>
+              <td>2025-11-10 15:15</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 8</td>
+              <td>200</td>
+              <td>Lina</td>
+              <td>2025-11-10 15:30</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 9</td>
+              <td>195</td>
+              <td>Bayu</td>
+              <td>2025-11-10 15:45</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 10</td>
+              <td>240</td>
+              <td>Sari</td>
+              <td>2025-11-10 16:00</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 11</td>
+              <td>260</td>
+              <td>Dedi</td>
+              <td>2025-11-10 16:15</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 12</td>
+              <td>185</td>
+              <td>Rosa</td>
+              <td>2025-11-10 16:30</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 13</td>
+              <td>300</td>
+              <td>Anton</td>
+              <td>2025-11-10 16:45</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 14</td>
+              <td>220</td>
+              <td>Putri</td>
+              <td>2025-11-10 17:00</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 15</td>
+              <td>275</td>
+              <td>Rudi</td>
+              <td>2025-11-10 17:15</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 16</td>
+              <td>190</td>
+              <td>Dian</td>
+              <td>2025-11-10 17:30</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 17</td>
+              <td>215</td>
+              <td>Agus</td>
+              <td>2025-11-10 17:45</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 18</td>
+              <td>260</td>
+              <td>Melati</td>
+              <td>2025-11-10 18:00</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 19</td>
+              <td>225</td>
+              <td>Hendra</td>
+              <td>2025-11-10 18:15</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+            <tr>
+              <td>Batch 20</td>
+              <td>280</td>
+              <td>Tika</td>
+              <td>2025-11-10 18:30</td>
+              <td><button class="detail-btn">Details</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Overlay -->
+    <div class="overlay" id="printOverlay">
+      <div class="print-box">
+        <button class="close-btn" id="closeOverlay">✖</button>
+        <h2>Siap untuk dicetak</h2>
+        <p>Pastikan semua data telah benar sebelum melanjutkan proses print.</p>
+        <button class="btn back-btn" id="backOverlay">Kembali</button>
+      </div>
+    </div>
+
+    <script>
+      const printBtn = document.querySelector(".print-btn");
+      const overlay = document.getElementById("printOverlay");
+      const closeBtn = document.getElementById("closeOverlay");
+      const backBtn = document.getElementById("backOverlay");
+
+      printBtn.addEventListener("click", () => {
+        overlay.style.display = "flex";
+      });
+
+      const hideOverlay = () => (overlay.style.display = "none");
+
+      closeBtn.addEventListener("click", hideOverlay);
+      backBtn.addEventListener("click", hideOverlay);
+
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) hideOverlay();
+      });
+    </script>
+  </body>
+</html>
